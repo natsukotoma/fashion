@@ -10,6 +10,10 @@ body {
 img{
 	max-width: 100%;
 }
+p{
+	line-height: 1.6;
+	font-size: 13px;
+}
 .sec_1{
 	background: url(../images/bg_1.jpg) no-repeat top center;
 }
@@ -20,15 +24,35 @@ img{
 	background: url(../images/bg_3.jpg) no-repeat top center;
 }
 .sec_4{
-	background: url(img/bg_4.jpg) no-repeat top center;
+	background: url(../images/bg_4.jpg) no-repeat top center;
 }
-@media(min-width:768px) {
+section{
+	height: 500px;
+	position: relative;
 }
-
-
-@media(min-width:768px) {
+.sec_1, .sec_2, .sec_3, .sec_4{
+	background-size: cover;
 }
-
+section .text_box{
+	position: absolute;
+	background-color: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+.sec_1 .text_box{
+	width:500px;
+	right: 20px;
+	bottom: 20px;
+	background-color: 
+}
+.sec_2 .text_box{
+	width:100%;
+	top: 50px;
+}
+.sec_3 .text_box{
+	width: 400px;
+	left: 70px;
+	bottom: 70px;
+}
 
 /*
 C:\Users\toma\AppData\Local\SourceTree\app-1.10.23.1
