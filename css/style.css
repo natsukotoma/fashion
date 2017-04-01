@@ -15,46 +15,80 @@ p{
 	font-size: 13px;
 }
 .sec_1{
-	background: url(../images/bg_1.jpg) no-repeat top center;
+	background: url(../images/bg_1.jpg);
 }
 .sec_2{
-	background: url(../images/bg_2.jpg) no-repeat top center;
+	background: url(../images/bg_2.jpg);
 }
 .sec_3{
-	background: url(../images/bg_3.jpg) no-repeat top center;
+	background: url(../images/bg_3.jpg);
 }
 .sec_4{
-	background: url(../images/bg_4.jpg) no-repeat top center;
+	background: url(../images/bg_4.jpg);
 }
-section{
-	height: 500px;
-	position: relative;
-}
-.sec_1, .sec_2, .sec_3, .sec_4{
-	background-size: cover;
+h2{
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 10px;
 }
 section .text_box{
 	position: absolute;
 	background-color: rgba(255,255,255,0.5);
 	padding: 10px;
 }
-.sec_1 .text_box{
-	width:500px;
-	right: 20px;
-	bottom: 20px;
-	background-color: 
+
+/* タブレット～PC*/
+@media (min-width: 768px){
+	section.sec_bg{
+		height: 500px;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:top center;
+	}
+	section h2{
+		font-size:40px;
+	}
+	.sec_1 .text_box{
+		width:500px;
+		right: 20px;
+		bottom: 20px;
+	}
+	.sec_2 .text_box{
+		width:100%;
+		top: 50px;
+	}
+	.sec_3 .text_box{
+		width: 400px;
+		left: 70px;
+		bottom: 70px;
+	}
 }
-.sec_2 .text_box{
-	width:100%;
-	top: 50px;
+
+/* スマホ　*/
+@media (max-width: 767px) {
+	section.sec_bg{
+		height: 200px;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:top center;
+	}
+	section .text_box{
+		bottom: 10px;
+		margin: 0 10px;
+	}
 }
-.sec_3 .text_box{
-	width: 400px;
-	left: 70px;
-	bottom: 70px;
-}
+
+
 
 /*
 C:\Users\toma\AppData\Local\SourceTree\app-1.10.23.1
 C:\training
+
+4/1
+・強さを意識する、下に行ほど強い
+・レイアウトから → 細部
+・まとめて書くものはまとめる　差分を下に書いていく
+・何かわからない事があったら開発者ツールでチェック
 */
