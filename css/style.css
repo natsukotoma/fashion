@@ -69,6 +69,9 @@ section .text_box{
 
 /* スマホ　*/
 @media (max-width: 767px) {
+	.contents{
+		margin:0 5px;
+	}
 	section.sec_bg{
 		height: 200px;
 		position: relative;
@@ -78,7 +81,7 @@ section .text_box{
 	}
 	section .text_box{
 		bottom: 10px;
-		margin: 0 10px;
+		margin: 0 5px;
 	}
 }
 
