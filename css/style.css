@@ -9,10 +9,20 @@ body {
 }
 img{
 	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: bottom;
+
 }
 p{
 	line-height: 1.6;
 	font-size: 13px;
+}
+section.scene {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:top center;
+	position: relative;
 }
 .sec_1{
 	background: url(../images/bg_1.jpg);
@@ -37,17 +47,17 @@ section .text_box{
 	padding: 10px;
 
 }
-
+.sec_1 .title_1{
+	margin:0 auto;
+	display: block;
+	text-align: center;
+}
 /* タブレット～PC*/
 @media (min-width: 768px){
-	section.sec_bg{
+	section.scene {
 		height: 500px;
-		position: relative;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position:top center;
 	}
-	section h2{
+	.scene h2{
 		font-size:40px;
 	}
 	.sec_1 .text_box{
@@ -57,32 +67,63 @@ section .text_box{
 	}
 	.sec_2 .text_box{
 		top: 50px;
-		left: 10px;
-		right: 10px;
+		left: 10px;/* [PC]横スクロールできてしまいます。　width:100%;削除*/
+		right: 10px;/* [PC]横スクロールできてしまいます。　width:100%;削除*/
 	}
 	.sec_3 .text_box{
 		width: 400px;
 		left: 70px;
 		bottom: 70px;
 	}
+	/*商品リスト float*/
+	ul.item_list_f{
+			overflow: hidden;
+	}
+	ul.item_list_f li{
+		float: left;
+		width: 32%;
+		margin-right: 2%;
+	}
+	ul.item_list_f li:last-child{
+		margin-right: 0%;
+	}
+	/*商品リスト display*/
+	ul.item_list_d{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	ul.item_list_d li{
+		width: 300px;
+	}
+
+
+
+
+
 }
 
 /* スマホ　*/
 @media (max-width: 767px) {
 	.contents{
-		margin:0 5px;
+		margin:0 5px;/* [SP]左右に5pxずつの空きを作りましょう #4　*/
 	}
-	section.sec_bg{
+	section.scene {
 		height: 200px;
-		position: relative;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position:top center;
 	}
 	section .text_box{
 		bottom: 10px;
-		margin: 0 5px;
+		margin: 0 5px;/* 簡単なWEBを実現する[レスポンシブ] #2　説明部分に左右に5pxずつ空白を作る
+*/
 	}
+	ul.item_list_f{
+		background-color: #f5f3f3;
+	}
+	ul.item_list_f li{
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
 }
 
 
@@ -96,4 +137,11 @@ C:\training
 ・レイアウトから → 細部
 ・まとめて書くものはまとめる　差分を下に書いていく
 ・何かわからない事があったら開発者ツールでチェック
+
+4/8
+・width:100%;は親要素に対して100％であろうとする。
+・paddingは100%とかそんなの関係なくかかる。→だから右に飛び出て余白ができる。
+・top,bottom,left,rightは要素を移動させるイメージではなくて、
+　左から指定pxのところからはじまる。とかそういうイメージ。
+・現在だいたい位置を決めるのは　"float"か"position"　flexboxは要勉強
 */
