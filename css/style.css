@@ -89,12 +89,12 @@ section .text_box{
 	}
 	/*商品リスト display*/
 	ul.item_list_d{
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+		text-align: center;
 	}
 	ul.item_list_d li{
 		width: 300px;
+		display:inline-block;
+		margin: 10px;
 	}
 
 
