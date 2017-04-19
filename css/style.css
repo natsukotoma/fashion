@@ -47,14 +47,14 @@ section .text_box{
 	padding: 10px;
 
 }
-.sec_1 .title_1{
+/* 画像中央揃え */
+.sec_1 .title_1 img{
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	width: 50%;
-	height: 50%;
 	margin: auto;
 }
 .sec_2 h2.title_2{
@@ -63,17 +63,28 @@ section .text_box{
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.sec_3 .flex_container{
+/*.sec_3 .flex_container{
 	display: flex;
-	align-items: center; /* 縦方向中央揃え */
-	justify-content: center; /* 横方向中央揃え */
+	align-items: center; /* 縦方向中央揃え
+	justify-content: center; /* 横方向中央揃え 
 	height: 50%;
+}*/
+.sec_3 .table-box{
+	display: table;
+	width: 100%;
+	height: 100%;
 }
 .sec_3 .title_3{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.sec_3 .title_3 img{
 	width: 500px;
 }
-
-
+.sec_3 h2{
+	position: absolute;
+}
 
 
 
@@ -122,10 +133,6 @@ section .text_box{
 		margin: 10px;
 	}
 
-
-
-
-
 }
 
 /* スマホ　*/
@@ -138,8 +145,7 @@ section .text_box{
 	}
 	section .text_box{
 		bottom: 10px;
-		margin: 0 5px;/* 簡単なWEBを実現する[レスポンシブ] #2　説明部分に左右に5pxずつ空白を作る
-*/
+		margin: 0 5px;/* 簡単なWEBを実現する[レスポンシブ] #2　説明部分に左右に5pxずつ空白を作る */
 	}
 	ul.item_list_f{
 		background-color: #f5f3f3;
@@ -169,4 +175,12 @@ C:\training
 ・top,bottom,left,rightは要素を移動させるイメージではなくて、
 　左から指定pxのところからはじまる。とかそういうイメージ。
 ・現在だいたい位置を決めるのは　"float"か"position"　flexboxは要勉強
+
+
+
+・ブロック要素 →　margin: 0 auto;
+・インライン要素　→　text-align: center;
+・親にdisplay:table; 子に　display;table-cell;
+・画像のサイズ変えたいときはimgタグにwidtをかける
+
 */
