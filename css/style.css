@@ -145,6 +145,7 @@ section .text_box{
 	}
 	section .text_box{
 		bottom: 10px;
+		left: 0;
 		margin: 0 5px;/* 簡単なWEBを実現する[レスポンシブ] #2　説明部分に左右に5pxずつ空白を作る */
 	}
 	ul.item_list_f{
