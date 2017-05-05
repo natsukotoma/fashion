@@ -12,21 +12,75 @@ img{
 	margin: 0;
 	padding: 0;
 	vertical-align: bottom;
-
 }
 p{
-	line-height: 1.6;
-	font-size: 13px;
+	text-align: center;
 }
-.transition_1 {
-    width:100px;
+
+
+/*ベース*/
+.transition_base {
+    width:200px;
     height:100px;
     background:#fff;
     border:1px solid #f80040;
-    transition:background 2s,width 5s;
+    transition:1s;
 	/*変化にかけるスピード　速さ＝小＞大 s＝秒*/
+} 
+.transition_base:hover{
+    width:300px;
+    background:#f80040;
+}
+
+/*1　なめらか*/
+.transition_1{
+    width:200px;
+    height:100px;
+    background:#fff;
+    border:1px solid #f80040;
+    transition:background 2s, width 5s, ease 2s;
 } 
 .transition_1:hover{
     width:300px;
     background:#f80040;
 }
+
+/*2　フェードアウト*/
+.transition_2{
+    width:200px;
+    height:100px;
+    background:#f80040;
+    border:1px solid #f80040;
+    transition: opacity 0.8s ease-out;
+} 
+.transition_2:hover{
+	opacity:0;
+}
+
+/*3　横に伸びる*/
+.transition_3{
+    width:200px;
+    height:100px;
+    background:#f80040;
+    border:1px solid #f80040;
+    transition: ease 1s;
+} 
+.transition_3:hover{
+    width:500px;
+    height: 50px;
+    background:#0072ff;
+}
+
+/*4　移動*/
+.transition_4 {
+    width:200px;
+    height:100px;
+    background:#fff;
+    border:1px solid #f80040;
+    transition:ease 2s;
+} 
+.transition_4:hover{
+    transform: translate(500px, 0px);
+}
+
+
