@@ -1,5 +1,6 @@
-body {
-  position:relative;
+.wrapper {
+    height: 1000px;
+    /* add/removeclass実験でスクロールバーをつけるためだけの高さ*/
 }
 
 /* モーダルウィンドウのスタイル */
@@ -44,4 +45,8 @@ body {
   left:50%;
   transform:translate(-50%,-50%);
   position: absolute ;
+}
+
+.lock {
+    overflow:hidden;
 }
