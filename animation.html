@@ -49,6 +49,9 @@ jQuery(function($){
   $('.transition_5').click(function(){
     $(this).toggleClass('active_5');
   });
+  $('.transition_5').bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",function(){
+    $(this).removeClass('active_5');
+  });
 });
 </script>
 <script type="text/javascript">
@@ -69,6 +72,7 @@ jQuery(function($){
 
 <!-- contents END -->
 </div>
+
 
 
 
