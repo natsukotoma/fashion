@@ -9,6 +9,8 @@
 
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+  
+<script src="js/jquery-3.2.1.js"></script>
 
 <title>training_fashion</title>
 </head>
@@ -16,7 +18,28 @@
 
 <body>
 
+  
+  
 <div class="contents">
+  
+  <div class="Hamburger">
+    <a href="#">
+     <span class="line line_01"></span>
+     <span class="line line_02"></span>
+     <span class="line line_03"></span>
+    </a>
+  </div>
+  
+  <div class="menu">
+    <ul>
+    <li>fadein left active</li>   
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+    </ul>
+</div>
+
 	<section class="sec_1 scene">
 		<h2>タイトル1</h2>
 		<div class="title_1"><img src="images/title_1.png"></div>
@@ -55,7 +78,16 @@
 <!-- contents END -->
 </div>
 
-
+  
+<script type="text/javascript">
+  $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('.Hamburger').on('click', function(){//.btnHamburgerがクリックされた時の処理
+    $('.menu').animate({'marginRight':'300px'},500);
+    $(this).toggleClass('is-active');//.is-activeを付ける・外す
+  });
+});
+  
+</script>
 
 
 </body>
