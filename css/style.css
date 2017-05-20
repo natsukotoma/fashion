@@ -117,7 +117,7 @@ section .text_box{
   height: 4px; /* 1本辺りの高さ */
   background: #fff; /* 線の色 */
   border-radius: 4px;
-    transition: all 0.3s ease-out;
+  transition: all 0.4s ease-out;
  }
 
 /* 3本線の各線の位置を指定 ---------------------- */
@@ -125,20 +125,20 @@ section .text_box{
 .Hamburger .line_02 { top: 18px; }
 .Hamburger .line_03 { top: 30px; }
 
-/* 最上部の線のスタイル ---------------------- */
-.Hamburger.is-active .line_01 {
+/* close 最上部の線のスタイル ---------------------- */
+.Hamburger.close .line_01 {
   top: 18px; /* 上から2番目の線の位置に変更 */
   /* 線を45度回転 */
   transform: rotate(45deg);
 }
 
-/* 上から2番目の線のスタイル ---------------------- */
-.Hamburger.is-active .line_02 {
+/* close 上から2番目の線のスタイル ---------------------- */
+.Hamburger.close .line_02 {
   opacity: 0; /* 不透明度を下げて線を消す */
 }
 
-/* 最下部の線のスタイル ---------------------- */
-.Hamburger.is-active .line_03 {
+/* close 最下部の線のスタイル ---------------------- */
+.Hamburger.close .line_03 {
   top: 18px; /* 上から2番目の線の位置に変更 */
   /* 線を135度回転 */
   transform: rotate(135deg);
@@ -146,7 +146,7 @@ section .text_box{
 
 /*menu*/
 
-.menu {
+#menu {
   position: fixed;
   top: 0;
   right: -300px;
@@ -155,8 +155,22 @@ section .text_box{
   z-index: 1;
   background-color:#000;
   opacity: 0.8;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); 
+  transform: translate3d(0px, 0, 0);
 }
-.menu li{
+
+#menu.active{
+  position: fixed;
+  top: 0;
+  min-width: 300px;
+  height: 100%;
+  z-index: 1;
+  background-color:#000;
+  opacity: 0.8;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); 
+  transform: translate3d(-300px, 0, 0);
+}
+#menu li{
   color: #fff;
   margin: 40px 0 0 20px;
 }
@@ -258,4 +272,23 @@ C:\training
 ・親にdisplay:table; 子に　display;table-cell;
 ・画像のサイズ変えたいときはimgタグにwidtをかける
 
+/*マージさえしなければ大丈夫
+<script type="text/javascript">
+  $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('.Hamburger').on('click', function(){//.btnHamburgerがクリックされた時の処理
+    $(this).toggleClass('close');//.is-activeを付ける・外す
+  });
+  $('.Hamburger').on('click', function(){//.btnHamburgerがクリックされた時の処理
+    $(this)
+    $('#menu').addClass('active');
+  });
+  $('.Hamburger.close').on('click', function(){//.btnHamburgerがクリックされた時の処理
+    $('#menu').removeClass('active');    
+  });
+});
+
+
+
+  
+</script>
 */
